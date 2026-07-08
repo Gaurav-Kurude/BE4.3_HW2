@@ -186,7 +186,7 @@ async function deleteHotel(hotelId){
       const deleteHotel = await Hotel.findByIdAndDelete(hotelId);
       return deleteHotel;
     } catch (error){
-        console.log(error);
+        throw error
     }
 }
 
